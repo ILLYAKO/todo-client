@@ -4,6 +4,8 @@
 
 ### Node.js is required.
 
+### Todo-server is required (https://github.com/ILLYAKO/todo-server.git)
+
 #### 1. Clone git repository from https://github.com/ILLYAKO/todo-client.git
 
 ```Bash
@@ -16,9 +18,6 @@ git clone https://github.com/ILLYAKO/todo-client.git
 cd todo-client
 npm ci
 ```
-
-#### 3. Download .env file from https://drive.google.com/file/d/16vMGuk9x_aZ4fHzo6YnCgkB6-BFQSrjt/view?usp=sharing and save in the root directory of the project
-
 
 #### 3. Start react client
 
