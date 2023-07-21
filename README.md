@@ -7,7 +7,7 @@
 #### 1. Clone git repository from https://github.com/ILLYAKO/todo-client.git
 
 ```Bash
-git clone https://github.com/ILLYAKO/todo-server.git
+git clone https://github.com/ILLYAKO/todo-client.git
 ```
 
 #### 2. Go to todo-client directory and run npm clean install
@@ -20,7 +20,7 @@ npm ci
 #### 3. Download .env file from https://drive.google.com/file/d/16vMGuk9x_aZ4fHzo6YnCgkB6-BFQSrjt/view?usp=sharing and save in the root directory of the project
 
 
-#### 3. Start react server
+#### 3. Start react client
 
 ```Bash
 npm start
