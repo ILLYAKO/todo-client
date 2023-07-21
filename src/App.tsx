@@ -65,36 +65,39 @@ const App: React.FC = () => {
 
     return (
         <main>
-            <div className="container-fluid">
-                <div className="row">
+            <div className="container-sm mt-5 p-5 pt-3 bg-light border border-dark">
+                <div className="row pb-5">
                     <div className="col">
-                        <h1>Marvelous v2.0</h1>
+                        <h1 className="fs-2 fw-semibold">Marvelous v2.0</h1>
                     </div>
-                    <div className="col">
-                        <button onClick={handleDeleteAll}>
+                    <div className="col-auto">
+                        <button
+                            onClick={handleDeleteAll}
+                            className="btn btn-link"
+                        >
                             Delete all tasks
                         </button>
                     </div>
                 </div>
-
-                <div className="row">
+                <div className="row g-2 pt-1 pb-3">
                     <div className="col">
                         <AddTodo saveTodo={handleSaveTodo} />
                     </div>
-                    <div className="col">
+                    <div className="col-auto">
                         <input
                             type="text"
                             placeholder="Search"
                             onChange={handleChangeSearch}
                             value={searchInput}
+                            className="form-control border-dark "
                         />
                     </div>
                 </div>
 
                 <div className="row">
                     <div className="col">
-                        <h2>To Do</h2>
-                        <hr />
+                        <h2 className="fs-4 fw-bold ps-3">To Do</h2>
+                        <hr className="border-black opacity-100 mt-1 mb-1" />
                         {todos
                             .filter((item) => {
                                 if (searchInput === "") {
@@ -118,8 +121,8 @@ const App: React.FC = () => {
                             ))}
                     </div>
                     <div className="col">
-                        <h2>Done</h2>
-                        <hr />
+                        <h2 className="fs-4 fw-bold ps-3">Done</h2>
+                        <hr className="border-black opacity-100 mt-1 mb-1" />
                         {todos
                             .filter((item) => {
                                 if (searchInput === "") {

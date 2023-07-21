@@ -15,20 +15,24 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
     };
 
     return (
-        <form
-            className="Form"
-            onSubmit={(e) => {
-                saveTodo(e, formData);
-            }}
-        >
-            <div>
-                <div>
-                    <input onChange={handleForm} type="text" id="name" />
-                </div>
+        <form onSubmit={(e) => saveTodo(e, formData)} className="row g-2">
+            <div className="col-auto">
+                <input
+                    onChange={handleForm}
+                    type="text"
+                    id="name"
+                    className="form-control border-dark"
+                />
             </div>
-            <button disabled={formData === undefined ? true : false}>
-                Add Todo
-            </button>
+            <div className="col-auto">
+                <button
+                    disabled={formData === undefined ? true : false}
+                    className="btn btn-outline-dark text-black"
+                    style={{ backgroundColor: "rgb(207, 226, 243)" }}
+                >
+                    Add
+                </button>
+            </div>
         </form>
     );
 };

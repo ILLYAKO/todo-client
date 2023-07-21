@@ -9,17 +9,16 @@ const Todo: React.FC<Props> = ({
     handleCheckBox,
 }) => {
     return (
-        <div className="Card">
-            <div className="Card-text">
+        <div className="form-check ps-">
                 <input
                     id="checkbox"
                     type="checkbox"
                     checked={todo.status}
                     onChange={() => handleCheckBox(todo)}
+                    className="form-check-input"
                 />
-                <h1>{todo.name}</h1>
+                <label className="lh-lg" htmlFor="checkbox">{todo.name}</label>
             </div>
-        </div>
     );
 };
 
