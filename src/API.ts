@@ -1,11 +1,13 @@
 import axios, { AxiosResponse } from "axios";
 
-const baseUrl: string = "http://localhost:4000";
+
+const baseUrl: string = process.env.REACT_APP_API_URL as string; 
+
 
 export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
     try {
         const todos: AxiosResponse<ApiDataType> = await axios.get(
-            baseUrl + "/todos"
+            baseUrl + "todos"
         );
         return todos;
     } catch (error) {
@@ -26,7 +28,7 @@ export const addTodo = async (
             updatedAt: Date.now().toString(),
         };
         const saveTodo: AxiosResponse<ApiDataType> = await axios.post(
-            baseUrl + "/add-todo",
+            baseUrl + "add-todo",
             todo
         );
         return saveTodo;
@@ -44,7 +46,7 @@ export const updateTodo = async (
 ): Promise<AxiosResponse<ApiDataType>> => {
     try {
         const updatedTodo: AxiosResponse<ApiDataType> = await axios.put(
-            `${baseUrl}/edit-todo/${todo._id}`,
+            `${baseUrl}edit-todo/${todo._id}`,
             todo
         );
         return updatedTodo;
@@ -60,7 +62,7 @@ export const deleteTodo = async (
 ): Promise<AxiosResponse<ApiDataType>> => {
     try {
         const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(
-            `${baseUrl}/delete-todo/${_id}`
+            `${baseUrl}delete-todo/${_id}`
         );
         return deletedTodo;
     } catch (error) {
@@ -73,7 +75,7 @@ export const deleteTodo = async (
 export const deleteAll = async (): Promise<AxiosResponse<ApiDataType>> => {
     try {
         const deletedAll: AxiosResponse<ApiDataType> = await axios.delete(
-            `${baseUrl}/delete-all`
+            `${baseUrl}delete-all`
         );
         return deletedAll;
     } catch (error) {
