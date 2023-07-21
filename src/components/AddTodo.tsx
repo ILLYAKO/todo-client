@@ -5,7 +5,9 @@ type Props = {
 };
 
 const AddTodo: React.FC<Props> = ({ saveTodo }) => {
-    const [formData, setFormData] = useState<ITodo | {}>();
+    const [formData, setFormData] = useState<ITodo | { name: string }>({
+        name: "",
+    });
 
     const handleForm = (e: React.FormEvent<HTMLInputElement>): void => {
         setFormData({
@@ -14,13 +16,19 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
         });
     };
 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        saveTodo(e, formData);
+        setFormData({ name: "" });
+    };
+
     return (
-        <form onSubmit={(e) => saveTodo(e, formData)} className="row g-2">
-            <div className="col-auto">
+        <form onSubmit={handleSubmit} className="row g-2">
+            <div className="col">
                 <input
                     onChange={handleForm}
                     type="text"
                     id="name"
+                    value={formData.name}
                     className="form-control border-dark"
                 />
             </div>

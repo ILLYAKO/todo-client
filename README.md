@@ -4,7 +4,8 @@
 
 ### Node.js is required.
 
-### Todo-server is required (https://github.com/ILLYAKO/todo-server.git)
+### ❗ To begin with, initiate the Todo-server. You can find instruction here: https://github.com/ILLYAKO/todo-server.git
+
 
 #### 1. Clone git repository from https://github.com/ILLYAKO/todo-client.git
 
@@ -19,7 +20,7 @@ cd todo-client
 npm ci
 ```
 
-#### 3. Start react client
+#### 3. Start React client side.
 
 ```Bash
 npm start

@@ -5,6 +5,9 @@
 body {
     margin: 0;
 }
+main .custom-main{
+    max-width: 950px;
+}
 
 input[type="checkbox"].form-check-input {
     background-image: none;

@@ -9,7 +9,7 @@ const Todo: React.FC<Props> = ({
     handleCheckBox,
 }) => {
     return (
-        <div className="form-check ps-">
+        <div className="form-check">
                 <input
                     id="checkbox"
                     type="checkbox"

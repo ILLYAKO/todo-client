@@ -65,7 +65,7 @@ const App: React.FC = () => {
 
     return (
         <main>
-            <div className="container-sm mt-5 p-5 pt-3 bg-light border border-dark">
+            <div className="container-sm mt-5 p-5 pt-3 bg-light border border-dark custom-main">
                 <div className="row pb-5">
                     <div className="col">
                         <h1 className="fs-2 fw-semibold">Marvelous v2.0</h1>
@@ -79,11 +79,11 @@ const App: React.FC = () => {
                         </button>
                     </div>
                 </div>
-                <div className="row g-2 pt-1 pb-3">
-                    <div className="col">
+                <div className="row d-flex justify-content-between pt-1 pb-4">
+                    <div className="col-md-6 col-sm-12 mt-1 mb-1">
                         <AddTodo saveTodo={handleSaveTodo} />
                     </div>
-                    <div className="col-auto">
+                    <div className="col-md-3 col-sm-12 mt-1 mb-1">
                         <input
                             type="text"
                             placeholder="Search"
@@ -95,7 +95,7 @@ const App: React.FC = () => {
                 </div>
 
                 <div className="row">
-                    <div className="col">
+                    <div className="col-md-6 col-sm-12 mt-1 mb-1">
                         <h2 className="fs-4 fw-bold ps-3">To Do</h2>
                         <hr className="border-black opacity-100 mt-1 mb-1" />
                         {todos
@@ -120,7 +120,7 @@ const App: React.FC = () => {
                                 />
                             ))}
                     </div>
-                    <div className="col">
+                    <div className="col-md-6 col-sm-12 mt-1 mb-1">
                         <h2 className="fs-4 fw-bold ps-3">Done</h2>
                         <hr className="border-black opacity-100 mt-1 mb-1" />
                         {todos
